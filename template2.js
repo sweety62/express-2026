@@ -12,6 +12,15 @@ app.post('/submit-users', (req, res) => {
   console.log(req.body);
   res.render('submitUsers', req.body);
 });
+
+app.get('/users', (req, res) => {
+  const users=["anil","rench","john","doe","michael","sarah","david","emily"];
+  
+
+  res.render('users', { users: users ,isLoging: true});
+  
+});
+
 app.listen(4700, () => {
   console.log("Server is running on port 4700");
 });
